@@ -1,0 +1,31 @@
+Count Even and Odd Numbers in a Matrix
+code
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int evenCount = 0;
+        int oddCount = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] % 2 == 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+            }
+        }
+
+        System.out.println("Even numbers count: " + evenCount);
+        System.out.println("Odd numbers count: " + oddCount);
+    }
+}
+output:
+Even numbers count: 4
+Odd numbers count: 5
+link:https://www.programiz.com/online-compiler/4X1MjPNm2Qaub
