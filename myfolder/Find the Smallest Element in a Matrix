@@ -1,0 +1,25 @@
+Find the Smallest Element in a Matrix
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {12, 45, 67},
+            {89, 5, 34},
+            {56, 78, 90}
+        };
+
+        int min = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
+                }
+            }
+        }
+
+        System.out.println("Smallest element: " + min);
+    }
+}
+
+output : Smallest element: 5
+link:https://www.programiz.com/online-compiler/5X1Mj9mjIQGky
