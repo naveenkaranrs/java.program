@@ -1,0 +1,25 @@
+Find the Average of All Elements in a Matrix
+code
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {10, 20, 30},
+            {40, 50, 60}
+        };
+
+        double sum = 0;
+        int count = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+                count++;
+            }
+        }
+
+        double average = sum / count;
+        System.out.println("Average of all elements: " + average);
+    }
+}
+output:Average of all elements: 35.0
+link:https://www.programiz.com/online-compiler/77DuK3M7UOKjL
