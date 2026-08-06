@@ -1,0 +1,29 @@
+Find the Average of All Elements
+
+code
+public class MatrixAverage {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {12, 5, 8},
+            {3, 19, 14},
+            {7, 2, 11}
+        };
+
+        int sum = 0;
+        int totalElements = matrix.length * matrix[0].length;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+
+        double average = (double) sum / totalElements;
+        System.out.println("Average of all elements: " + average);
+    }
+}
+
+output 
+Average of all elements: 9.0
+
+link : https://www.programiz.com/online-compiler/1kBXP1ut7AoWR
