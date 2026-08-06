@@ -1,0 +1,26 @@
+Print the Secondary Diagonal
+
+code
+public class SecondaryDiagonal {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {12, 5, 8},
+            {3, 19, 14},
+            {7, 2, 11}
+        };
+
+        int n = matrix.length;
+        System.out.print("Secondary Diagonal: ");
+        for (int i = 0; i < n; i++) {
+            // Secondary diagonal element at row i is at col (n - 1 - i)
+            System.out.print(matrix[i][n - 1 - i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+ouput
+Secondary Diagonal: 8 19 7 
+
+link
+https://www.programiz.com/online-compiler/2tLAEiwt1M16J
