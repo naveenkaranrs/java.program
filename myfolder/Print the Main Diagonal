@@ -1,0 +1,25 @@
+Print the Main Diagonal
+
+code
+public class MainDiagonal {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {12, 5, 8},
+            {3, 19, 14},
+            {7, 2, 11}
+        };
+
+        System.out.print("Main Diagonal: ");
+        for (int i = 0; i < matrix.length; i++) {
+            // Main diagonal elements are at position matrix[i][i]
+            System.out.print(matrix[i][i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+output
+Main Diagonal: 12 19 11
+
+link:
+https://www.programiz.com/online-compiler/5LqFN7OTKScM2
