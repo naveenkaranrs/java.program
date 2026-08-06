@@ -1,0 +1,92 @@
+Sequential Flow
+
+code
+import java.util.Scanner;
+
+public class Program001_SequentialFlow {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter item name: ");
+        String itemName = scanner.nextLine();
+        System.out.print("Enter unit price: ");
+        double unitPrice = scanner.nextDouble();
+        System.out.print("Enter quantity: ");
+        int quantity = scanner.nextInt();
+
+        double subtotal = unitPrice * quantity;
+        double tax = subtotal * 0.18;
+        double grandTotal = subtotal + tax;
+
+        System.out.println("\nItem: " + itemName + " | Grand Total: $" + grandTotal);
+        scanner.close();
+    }
+}
+ouput 
+Enter item name: 5
+Enter unit price: 120
+Enter quantity: 3
+
+Item: 5 | Grand Total: $424.8
+link :https://www.programiz.com/online-compiler/29JC1LzBQi5Wx
+
+Loop Flow Control
+
+code
+public class Program002_LoopFlow {
+    public static void main(String[] args) {
+        System.out.println("Printing odd numbers up to 10, skipping 5:");
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) continue; // Skip even numbers
+            if (i == 7) break;       // Terminate early at 7
+            System.out.print(i + " ");
+        }
+    }
+}
+
+output
+Printing odd numbers up to 10, skipping 5:
+1 3 5 
+link
+https://www.programiz.com/online-compiler/0i7pR668uP0vJ
+
+Function Flow Execution (Stack Flow)
+
+code
+public class Program003_FunctionFlow {
+    static void stepA() {
+        System.out.println("Step A started");
+        stepB();
+        System.out.println("Step A finished");
+    }
+    static void stepB() {
+        System.out.println("Step B executed");
+    }
+    public static void main(String[] args) {
+        System.out.println("Main started");
+        stepA();
+        System.out.println("Main ended");
+    }
+}
+output
+Main started
+Step A started
+Step B executed
+Step A finished
+Main ended
+link
+https://www.programiz.com/online-compiler/6UzqdTzmyZKdL
+
+Early Exit Flow (return inside loops)
+code
+public class Program004_EarlyExitFlow {
+    static boolean containsKey(int[] arr, int target) {
+        for (int num : arr) {
+            if (num == target) return true; // Early return exit flow
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        int[] numbers = {10, 25, 40, 55};
+        System.out.println("Found 25: " + containsKey(numbers, 25));
+    }
+}
