@@ -1,0 +1,24 @@
+Find the sum of all elements
+
+public class MatrixSum {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {12, 5, 8},
+            {3, 19, 14},
+            {7, 2, 11}
+        };
+
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+
+        System.out.println("Sum of all elements: " + sum);
+    }
+}
+
+output 
+Sum of all elements: 81
+link :https://www.programiz.com/online-compiler/63ecUff3YJGj5
